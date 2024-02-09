@@ -1,0 +1,31 @@
+products:
+  - name: "Orange Disco Suit"
+    desc: "Step out in style with our vibrant Orange Disco Suit! Designed to make a statement, this eye-catching ensemble features a dazzling gold sequined lapel that pairs perfectly with its bold orange hue. The suit includes a matching afro that completes the look, ensuring you stand out in any crowd. Ideal for those with a flair for the dramatic, this outfit boasts a lively and cheerful vibe that's sure to brighten any event. Strike a pose with confidence—whether you're pointing up to the sky or tucking your hand casually behind your back—and let the room light up with your presence. With its open button and wide smile-ready design, this leisure suit promises to deliver a punch of fun to your wardrobe. Add a touch of retro glam to your look with the Afro wig, round sunglasses, and sleek black shoes included in this picture-perfect package. Don't just dress to impress—dress to express with our adult Orange Leisure Suit, perfect for those who love to be the life of the party!"
+    json: '{"productName": "Orange Disco Suit", "mainColor": "orange", "secondaryColors": ["gold", "brown", "black", "red"], "garmentType": "suit", "gender": "men", "brand": "unspecified"}'
+    images:
+      - url: "http://ec2-16-171-139-144.eu-north-1.compute.amazonaws.com/wp-content/uploads/2024/02/suitmeister-disco-suit-orange-partyanzug-142658-1.webp"
+        alt: "Man in vibrant orange '70s attire with afro and sunglasses, striking a dynamic disco pose."
+      - url: "http://ec2-16-171-139-144.eu-north-1.compute.amazonaws.com/wp-content/uploads/2024/02/304fa837cc214de49bf9a14532717cc5-scaled.webp"
+        alt: "Man in a bright orange suit with gold sequins, afro wig, and sunglasses, smiling cheerfully."
+      - url: "http://ec2-16-171-139-144.eu-north-1.compute.amazonaws.com/wp-content/uploads/2024/02/71bcd4889ac34705bda19d2438beda9f-scaled.webp"
+        alt: "Man seen from behind wearing a bright orange suit with a distinctive design."
+  - name: "Women's AC Milan Shirt"
+    desc: "Showcase your team spirit and step onto the scene with style in the AC Milan 21/22 Women's Home Shirt. This iconic jersey, festooned in the time-honored red and black, is your go-to garment to display unabashed support for the Rossoneri. Sporting the sharp white \"Emirates FLY BETTER\" sponsor and a neat Puma logo, this top is designed not just for comfort, but to elevate the fan experience. With a modern design that fits just right, allow yourself to be enveloped in the rich history and modern flair of one of football's most storied clubs. Whether you're cheering from the stands or from the comfort of your home, this shirt is the perfect meld of sporty elegance and die-hard fandom, an essential addition to any AC Milan devotee's wardrobe. Shop now and embody the passion of football!"
+    json: '{ "productName": "AC Milan 2021-2022 Home Shirt Women", "mainColor": "red", "secondaryColors": [ "black" ], "garmentType": "shirt", "gender": "women", "brand": "Puma" }'
+    images:
+      - url: "https://store.acmilan.com/cdn/shop/products/770384-A81_04_800x.jpg?v=1691995610"
+        alt: "Model in AC Milan jersey with \"Emirates Fly Better\" logo standing confidently, exuding a sporty vibe."
+      - url: "https://store.acmilan.com/cdn/shop/products/770384-A81_06_cb9d0a0d-f5d5-4e7d-9a5b-dfdda80f4c1b_800x.jpg?v=1691995610"
+        alt: "AC Milan 2020-2021 home jersey by Puma in red and black with \"Emirates Fly Better\" text."
+      - url: "https://store.acmilan.com/cdn/shop/products/770384-A81_08_800x.jpg?v=1691995610"
+        alt: "Woman in AC Milan's 2021-2022 home jersey with Puma logo and \"MSC\" lettering."
+  - name: "SESAME STREET™.. - Suit"
+    desc: "Unleash your playful side and stand out at any festivity with the eye-catching SESAME STREET™ suit! Embrace a unique blend of style and childhood nostalgia in this exuberantly colorful suit, featuring a vivid montage of your favorite Sesame Street characters—Elmo, Bert, and more. Designed for the fashion-forward and fun-loving individual, this suit radiates joy and personality with its cartoon and game character prints scattered across a snug three-piece ensemble that includes a stylish matching tie. The smart white shirt complements the vibrant hues, and white sneakers will complete this bold look perfectly. Aiming to strike a balance between a well-tailored profile and an unapologetic love for color and patterns, this SESAME STREET™ suit ensures that you are the life of the party, be it a themed wedding, a special celebration, or simply a statement for those who dare to be different. So why blend in when you were born to stand out? Add this SESAME STREET™ suit to your wardrobe and become an instant conversation starter, all the while embracing the comfort and confidence that comes with exceptional taste and quality."
+    json: "{\"productName\":\"Cartoon Extravaganza Sesame Street Men's Suit\",\"mainColor\":\"Multicolor\",\"secondaryColors\":[\"Red\",\"Blue\",\"Yellow\",\"Green\",\"White\"],\"garmentType\":\"Suit\",\"gender\":\"Men\",\"brand\":\"Unbranded\",\"shortDescription\":\"A men's bold, multicolored suit with popular cartoon character prints.\",\"longDescription\":\"This men's suit features a vibrant medley of colors and is adorned with an array of beloved cartoon character graphics, including Hello Kitty, Scooby Doo, and Spiderman. The suit is paired with a white shirt and a tie that echoes the playful motifs of the suit. Finishing off the look are white sneakers that add a casual flair to the ensemble, perfect for individuals who enjoy making a statement with their attire.\"}"
+    images:
+      - url: "https://img01.ztat.net/article/spp-media-p1/201e812d7f5e40a1ac57d5c9ca9a3930/fae94816e94641f4acfb75a9a20511c9.jpg?imwidth=1800"
+        alt: "Man in a playful suit with colorful cartoon patterns, white shirt, and sneakers, emanating a joyful vibe."
+      - url: "https://img01.ztat.net/article/spp-media-p1/9229ea63adb8460da1e717bfce36268e/1f001be8b8254942a4e2ff3fcbd17051.jpg?imwidth=1800"
+        alt: ""
+      - url: "https://img01.ztat.net/article/spp-media-p1/989c0280068441098380c1beb660c74d/0dcc91c2f416441e97b4d5c6fe962071.jpg?imwidth=1800"
+        alt: ""

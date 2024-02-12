@@ -13,23 +13,6 @@ st.set_page_config(page_title="SceneXplain eCommerce Demo", layout="wide")
 Style.page_menu_css()
 Components.sidebar()
 
-st.title("SceneXplain eCommerce Demo")
-
-settings = {}
-
-# st.sidebar.title("About SceneXplain")
-# st.sidebar.markdown(
-# "SceneXplain is your go-to solution for advanced image captioning and video summarization. Powered by Jina AI's cutting-edge multimodal algorithms, SceneXplain effortlessly converts visuals into captivating textual narratives, pushing beyond conventional captioning boundaries. With an intuitive interface and robust API integration, it's tailored for both seasoned users and developers alike. Opt for SceneXplain for unmatched visual comprehension, meticulously designed with innovation, precision, and expertise."
-# )
-
-# with st.sidebar.expander(label="QR codes"):
-# st.markdown("### SceneXplain")
-# st.image("./data/qr_codes/scenex_url.png")
-# st.markdown("### eCommerce demo")
-# st.image("./data/qr_codes/scenex_demo.png")
-
-# debug = st.sidebar.toggle("Debug mode")
-
 st.markdown("### Behind the scenes")
 
 st.markdown(

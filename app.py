@@ -4,7 +4,8 @@ import streamlit as st
 import yaml
 from rich.console import Console
 
-from helper import LANGUAGES, image_to_data_uri, process_image
+from helper import (LANGUAGES, bytes_to_data_uri, image_to_data_uri,
+                    process_image)
 
 console = Console()
 
@@ -25,9 +26,13 @@ with st.sidebar.expander(label="QR codes"):
     st.markdown("### eCommerce demo")
     st.image("./data/qr_codes/scenex_demo.png")
 
-example_tab, live_tab, bts_tab = st.tabs(
-    ["Example outputs", "Live", "Behind the scenes"]
-)
+debug = st.sidebar.toggle("Debug mode")
+
+(
+    example_tab,
+    live_tab,
+    bts_tab,
+) = st.tabs(["Example outputs", "Live", "Behind the scenes"])
 
 with open("data/products.yml") as file:
     data = yaml.safe_load(file)
@@ -84,7 +89,7 @@ with live_tab:
     # Place a selectbox in each column using the new names
     with source_col:
         input_source = st.selectbox(
-            label="Input source", options=["Presets", "URL", "Upload"]
+            label="Input source", options=["Presets", "URL", "Upload", "Webcam"]
         )
     with task_col:
         task = st.selectbox(label="Task", options=tasks)
@@ -148,6 +153,14 @@ with live_tab:
             url = image_to_data_uri(file_path)
             insert_text = ""
 
+    elif input_source == "Webcam":
+        picture = st.camera_input("Take a picture")
+
+        if picture is not None:
+            bytes_data = picture.getvalue()
+            url = bytes_to_data_uri(bytes_data, mime_type="image/png")
+            operation = "Webcam photo"
+
     run_button = st.button("Run task")
     if run_button:
         # set default values
@@ -183,6 +196,10 @@ with live_tab:
                 st.json(text)
             else:
                 st.write(text)
+
+            if debug:
+                st.markdown("#### Raw response")
+                st.json(output)
 
 with bts_tab:
     st.markdown("### Behind the scenes")

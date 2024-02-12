@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "productName": {
+      "type": "string",
+      "description": "Create a compelling SEO friendly name based on the product name of %s"
+    },
+    "mainColor": {
+      "type": "string",
+      "description": "The primary color of the apparel item as displayed in the image."
+    },
+    "secondaryColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of secondary colors present on the apparel item. Can be empty if no secondary colors are discernible."
+    },
+    "garmentType": {
+      "type": "string",
+      "description": "The type of the garment, such as 'shirt', 'dress', 'pants', etc."
+    },
+    "gender": {
+      "type": "string",
+      "description": "The target gender for the apparel item, such as 'men', 'women', 'unisex', etc."
+    },
+    "brand": {
+      "type": "string",
+      "description": "The brand name associated with the apparel item."
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "A brief overview of the apparel product."
+    },
+    "longDescription": {
+      "type": "string",
+      "description": "A detailed description of the apparel product."
+    }
+  },
+  "required": [
+    "productName",
+    "mainColor",
+    "secondaryColors",
+    "garmentType",
+    "gender",
+    "brand"
+  ]
+}

@@ -131,7 +131,6 @@ def image_to_data_uri(file_path):
 
 
 SCENEX_KEY = os.environ.get("SCENEX_KEY", None)
-SCENEX_KEY = "5d2psNNsd9wYG51etaaU:cfdd064b507e4a9c97c7432109b4f3696432503d80748682d4aed36c9a321491"
 
 
 def process_image(

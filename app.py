@@ -19,13 +19,15 @@ st.sidebar.markdown(
     "SceneXplain is your go-to solution for advanced image captioning and video summarization. Powered by Jina AI's cutting-edge multimodal algorithms, SceneXplain effortlessly converts visuals into captivating textual narratives, pushing beyond conventional captioning boundaries. With an intuitive interface and robust API integration, it's tailored for both seasoned users and developers alike. Opt for SceneXplain for unmatched visual comprehension, meticulously designed with innovation, precision, and expertise."
 )
 
-example_tab, live_tab = st.tabs(["Example outputs", "Live"])
+example_tab, live_tab, bts_tab = st.tabs(
+    ["Example outputs", "Live", "Behind the scenes"]
+)
 
-with open("products.yaml") as file:
+with open("data/products.yml") as file:
     data = yaml.safe_load(file)
     products = data["products"]
 
-with open("prompts.yml") as file:
+with open("data/prompts.yml") as file:
     data = yaml.safe_load(file)
     prompts = data["prompts"]
     jsons = data["json"]
@@ -71,9 +73,13 @@ with example_tab:
 with live_tab:
     tasks = ["Alt text", "Caption", "Product description", "Structured JSON"]
     # Create two columns and rename them as requested
-    task_col, lang_col, source_col = st.columns(3)
+    source_col, task_col, lang_col = st.columns(3)
 
     # Place a selectbox in each column using the new names
+    with source_col:
+        input_source = st.selectbox(
+            label="Input source", options=["Presets", "URL", "Upload"]
+        )
     with task_col:
         task = st.selectbox(label="Task", options=tasks)
 
@@ -81,10 +87,6 @@ with live_tab:
         language = st.selectbox(label="Language", options=LANGUAGES.keys())
         lang_code = LANGUAGES[language]
 
-    with source_col:
-        input_source = st.selectbox(
-            label="Input source", options=["Presets", "URL", "Upload"]
-        )
     # task = st.selectbox(label="Task", options=tasks)
 
     # language = st.selectbox(label="Language", options=LANGUAGES.keys())
@@ -116,11 +118,13 @@ with live_tab:
             product = products[selected_image_index]
             url = products[selected_image_index]["images"][0]["url"]
             operation = product["name"]
+            insert_text = product["name"]
 
     elif input_source == "URL":
         selected_image_index = None
         url = st.text_input(label="URL")
         operation = url.split("/")[-1]
+        insert_text = ""
 
     elif input_source == "Upload":
         selected_image_index = None
@@ -136,6 +140,7 @@ with live_tab:
 
             operation = uploaded_file.name
             url = image_to_data_uri(file_path)
+            insert_text = ""
 
     run_button = st.button("Run task")
     if run_button:
@@ -152,7 +157,7 @@ with live_tab:
             features = ["question_answer"]
         elif task == "Structured JSON":
             features = ["json"]
-            json_schema = jsons["apparel"] % product["name"]
+            json_schema = jsons["apparel"] % insert_text
 
         with st.spinner(text=f"Creating **{task}** for **:blue[{operation}]**"):
             output = process_image(
@@ -172,3 +177,16 @@ with live_tab:
                 st.json(text)
             else:
                 st.write(text)
+
+with bts_tab:
+    st.markdown("### Behind the scenes")
+
+    st.markdown(
+        "This web app uses [SceneXplain's API](https://scenex.jina.ai/api) to generate alt texts, products descriptions and JSON output."
+    )
+    st.markdown("##### JSON Schema")
+    st.markdown(
+        "With a JSON Schema you can define your output data format, making it easier to integrate SceneXplain with your existing tech stack."
+    )
+    with open("data/product.json") as file:
+        st.json(file.read())

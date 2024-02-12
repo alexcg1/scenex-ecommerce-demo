@@ -19,6 +19,11 @@ st.sidebar.markdown(
     "SceneXplain is your go-to solution for advanced image captioning and video summarization. Powered by Jina AI's cutting-edge multimodal algorithms, SceneXplain effortlessly converts visuals into captivating textual narratives, pushing beyond conventional captioning boundaries. With an intuitive interface and robust API integration, it's tailored for both seasoned users and developers alike. Opt for SceneXplain for unmatched visual comprehension, meticulously designed with innovation, precision, and expertise."
 )
 
+st.sidebar.markdown("### SceneXplain")
+st.sidebar.image("./data/qr_codes/scenex_url.png")
+st.sidebar.markdown("### eCommerce demo")
+st.sidebar.image("./data/qr_codes/scenex_demo.png")
+
 example_tab, live_tab, bts_tab = st.tabs(
     ["Example outputs", "Live", "Behind the scenes"]
 )
@@ -110,7 +115,7 @@ with live_tab:
                 # Display checkbox in the second row
                 with cols_cb[i]:
                     # Unique key for each checkbox to work properly
-                    if st.checkbox("Select", key=f"cb_{i}"):
+                    if st.checkbox(f"{product['name']}", key=f"cb_{i}"):
                         selected_image_index = i
 
         # Display the selected image index

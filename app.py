@@ -19,10 +19,11 @@ st.sidebar.markdown(
     "SceneXplain is your go-to solution for advanced image captioning and video summarization. Powered by Jina AI's cutting-edge multimodal algorithms, SceneXplain effortlessly converts visuals into captivating textual narratives, pushing beyond conventional captioning boundaries. With an intuitive interface and robust API integration, it's tailored for both seasoned users and developers alike. Opt for SceneXplain for unmatched visual comprehension, meticulously designed with innovation, precision, and expertise."
 )
 
-st.sidebar.markdown("### SceneXplain")
-st.sidebar.image("./data/qr_codes/scenex_url.png")
-st.sidebar.markdown("### eCommerce demo")
-st.sidebar.image("./data/qr_codes/scenex_demo.png")
+with st.sidebar.expander(label="QR codes"):
+    st.markdown("### SceneXplain")
+    st.image("./data/qr_codes/scenex_url.png")
+    st.markdown("### eCommerce demo")
+    st.image("./data/qr_codes/scenex_demo.png")
 
 example_tab, live_tab, bts_tab = st.tabs(
     ["Example outputs", "Live", "Behind the scenes"]

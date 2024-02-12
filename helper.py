@@ -7,6 +7,9 @@ import requests
 from rich.console import Console
 from rich.logging import RichHandler
 
+SCENEX_KEY = os.environ.get("SCENEX_KEY", None)
+# from creds import SCENEX_KEY
+
 console = Console()
 
 # set up logging
@@ -130,7 +133,9 @@ def image_to_data_uri(file_path):
         return f"data:image/png;base64,{encoded_image}"
 
 
-SCENEX_KEY = os.environ.get("SCENEX_KEY", None)
+def bytes_to_data_uri(bytes_data, mime_type="image/png"):
+    encoded_image = base64.b64encode(bytes_data).decode("utf-8")
+    return f"data:{mime_type};base64,{encoded_image}"
 
 
 def process_image(

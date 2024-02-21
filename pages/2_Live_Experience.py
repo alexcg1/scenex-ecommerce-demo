@@ -4,8 +4,14 @@ import streamlit as st
 import yaml
 from rich.console import Console
 
-from helper import (LANGUAGES, Components, Style, bytes_to_data_uri,
-                    image_to_data_uri, process_image)
+from helper import (
+    LANGUAGES,
+    Components,
+    Style,
+    bytes_to_data_uri,
+    image_to_data_uri,
+    process_image,
+)
 
 console = Console()
 st.set_page_config(page_title="SceneXplain eCommerce Demo", layout="wide")
@@ -42,6 +48,7 @@ tasks = [
     "Alt text",
     "Caption",
     "Product description",
+    "Slogan",
     "Structured JSON",
     "Custom question",
 ]
@@ -136,6 +143,9 @@ if run_button:
     elif task == "Product description":
         features = ["question_answer"]
         question = prompts["product_desc"] % product["name"]
+    elif task == "Slogan":
+        features = ["question_answer"]
+        question = prompts["slogan"]
     elif task == "Structured JSON":
         features = ["json"]
         json_schema = jsons["apparel"] % insert_text

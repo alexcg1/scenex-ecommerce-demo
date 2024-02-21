@@ -1,6 +1,6 @@
 # SceneXplain eCommerce Demo
 
-To use this demo live, go [here](http://localhost:8501/Examples)
+To use this demo live, go [here](https://scenex-ecommerce-demo.streamlit.app/Live_Experience)
 
 ## Run on your own machine
 

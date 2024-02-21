@@ -10,5 +10,5 @@ To use this demo live, go [here](http://localhost:8501/Examples)
 4. Run this command:
 
 ```shell
-env SCENEX_KEY="<your scenexplain key" streamlit run app.py
+env SCENEX_KEY="<your scenexplain key>" streamlit run app.py
 ```
